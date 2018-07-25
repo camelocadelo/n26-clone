@@ -10,13 +10,21 @@
 </template>
 
 <style lang="scss">
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+html,
+body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   height: 100%;
+  background-color: #fbfbfb;
 }
 #nav {
   padding: 30px;
