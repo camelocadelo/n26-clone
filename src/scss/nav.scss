@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+
+}
+.container {
+  width: 100%;
+  display: flex;
+  padding: 30px 40px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  text-align: left;
+  &__logo {
+    order: 1;
+    flex-grow: 1;
+    .n26_logo {
+      height: 32px;
+      width: 60px;
+      fill: currentcolor;
+      position: relative;
+    }
+  }
+  &__transactions {
+    order: 2;
+    flex-grow: 2;
+    top: 5px;
+    left: 42px;
+    position: relative;
+    .fa-list {
+      margin-right: 15px;
+      font-size: 20px;
+      position: relative;
+      top: 2px;
+    }
+  }
+  &__account {
+    order: 3;
+    flex-grow: 1;
+    text-align: right;
+    margin-right: 20px;
+    .fa-user {
+      margin-right: 20px;
+      font-size: 20px;
+      font-weight: lighter;
+    }
+  }
+  div {
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+  .current {
+    color: #3bd0d6;
+  }
+}
