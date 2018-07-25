@@ -8,12 +8,15 @@
   max-width: 768px;
   color: black;
   font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
   h1 {
-    font-family: "Open Sans", sans-serif;
     font-size: 26px;
   }
   form {
-    width: 35%;
+    width: 350px;
     margin: 0 auto;
     input,
     button {
@@ -119,4 +122,26 @@
   color: inherit;
   margin-left: auto;
   margin-right: auto;
+}
+
+.error {
+  color: rgb(215, 55, 55);
+  width: 350px;
+  font-size: 0.9rem;
+  span {
+    display: inline-block;
+    margin: 5px;
+  }
+  i {
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
+
+.redBorder {
+  border: 1px solid red !important;
+}
+.redBorderBtm {
+  border: 1px solid rgb(215, 55, 55) !important;
+  border-top:none !important;
 }

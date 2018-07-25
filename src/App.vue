@@ -1,39 +1,33 @@
 <template>
   <div id="app">
     <div id="nav">
-      <!-- <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/transactions">Transactions</router-link> -->
+      <t-nav></t-nav>
     </div>
     <router-view/>
   </div>
 </template>
+<script>
+import TNav from "./components/TransactionsNav.vue";
+export default {
+  name: "Transactions",
+  components: {
+    TNav
+  }
+};
+</script>
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
-html,
-body {
-  height: 100%;
-  margin: 0px;
-  padding: 0px;
-}
-#app {
-  font-family: "Open Sans", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  height: 100%;
-  background-color: #fbfbfb;
-}
+
 #nav {
   padding: 30px;
-  z-index: 1;
+  text-align: center;
+  z-index: 2;
   a {
     font-weight: bold;
     color: #2c3e50;
     &.router-link-exact-active {
-      color: #42b983;
+      color: #3bd0d6;
     }
   }
 }
