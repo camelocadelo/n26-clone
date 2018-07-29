@@ -8,6 +8,10 @@
       <div class="error" v-if="error">
         <i class="fas fa-times"></i>  <span>The login details you’ve entered are incorrect.</span>
       </div> 
+      <div class="error" v-if="redirected">
+         <i class="fas fa-times"></i>  <span>Please login first</span>
+      </div>
+
       <input v-bind:class="{ redBorder: error }" v-model="email"  type="text" placeholder="Email" class="email">
       <input v-bind:class="{ redBorderBtm: error }" v-model="password" type="password" placeholder="Password" class="password">
       <a href='#'>Forgot your password ?</a>
@@ -18,7 +22,8 @@
 </template>
 
 <script>
-// import auth from "@/lib/login/";
+import auth from "@/lib/login/";
+import { mapGetters, mapActions } from "vuex";
 
 export default {
   name: "Login",
@@ -28,22 +33,32 @@ export default {
       password: "",
       error: false,
       spinner: false,
-      redBorder: false
+      redBorder: false,
+      redirected: this.$route.query.redirect
     };
+  },
+  computed: {
+    ...mapGetters({
+      isAuthenticated: "authenticated"
+    })
   },
   methods: {
     login() {
       this.spinner = true;
       if (this.email === "demo" && this.password === "demo") {
-        // this.setAuthentication(true);
-        // auth.isLoggedIn(true);
+        this.setAuthentication(true);
+        auth.isLoggedIn(true);
         this.$router.replace(this.$route.query.redirect || "/transactions");
       } else {
         this.error = true;
         this.redBorder = true;
         this.spinner = false;
+        this.redirected = false;
       }
-    }
+    },
+    ...mapActions({
+      setAuthentication: "setAuthentication"
+    })
   }
 };
 </script>

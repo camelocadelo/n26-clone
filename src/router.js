@@ -3,7 +3,7 @@ import Router from "vue-router";
 import Login from "./views/Login.vue";
 import Account from "./views/Account.vue";
 import Transactions from "./views/Transactions.vue";
-// import auth from "@/lib/login/";
+import auth from "@/lib/login/";
 
 Vue.use(Router);
 
@@ -17,12 +17,14 @@ export default new Router({
     {
       path: "/account",
       name: "account",
-      component: Account
+      component: Account,
+      beforeEnter: auth.requireAuth
     },
     {
       path: "/transactions",
       name: "transactions",
-      component: Transactions
+      component: Transactions,
+      beforeEnter: auth.requireAuth
     }
   ]
 });
