@@ -1,0 +1,65 @@
+.accountInfo {
+    font-family: "Open Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    border-radius: 5px;
+    width: 850px;
+    margin: 10px auto;
+    padding: 27px 18px;
+    &__first {
+      display: flex;
+      h4 {
+        width: 100%;
+      }
+    }
+    &__second {
+      display: flex;
+      
+    }
+    &__details {
+      position: relative;
+      display: block;
+      h1 {
+        font-size: 24px;
+      }
+    }
+    &__membership {
+      position: relative;
+      display: inline-block;
+      border-radius: 8px;
+      height: 230px;
+      background-color: white;
+      flex-grow: 5;
+      padding: 13px 18px;
+      box-shadow: 0 0.08em 0.25em 0.075em rgba(0, 0, 0, 0.075);
+      margin-right: 30px; 
+      h2 {
+        margin-bottom: 90px;
+      }
+      span {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        line-height: 80%;
+        font-size: 12px;
+        color: grey!important;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-transform: uppercase;
+      }
+    }
+    &__type {
+      position: relative;
+      display: inline-block;
+      border-radius: 8px;
+      flex-grow: 5;
+      padding: 0px 18px;
+      &--text{
+        margin: 20px 0px;
+        span {
+          font-size: 14px;
+          color: grey;
+        }
+      }
+    }
+  }

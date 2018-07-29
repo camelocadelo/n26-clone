@@ -1,24 +1,26 @@
 <template>
   <div id="app">
     <div id="nav">
-      <t-nav></t-nav>
+      <navbar></navbar>
     </div>
     <router-view/>
   </div>
 </template>
 <script>
-import TNav from "./components/TransactionsNav.vue";
+import Navbar from "./components/Navbar.vue";
 export default {
   name: "Transactions",
   components: {
-    TNav
+    Navbar
   }
 };
 </script>
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
-
+body {
+  background-color: #FBFBFB;
+  }
 #nav {
   padding: 30px;
   text-align: center;

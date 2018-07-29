@@ -1,16 +1,19 @@
 .transactions {
-    font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;  
   border-radius: 5px;
   width: 850px;
-  margin: 40px auto;
+  margin: 10px auto;
   display: block;
   padding: 27px 18px;
   &__details {
     text-align: left;
+    h1 {
+      font-size: 24px;
+    }
     &__balance {
-      font-size: 40px;
+      font-size: 40px !important;
     }
     &__label {
       color: grey;
@@ -39,7 +42,7 @@
         list-style: none;
         width: 100%;
         display: block;
-        border-left: 5px solid transparent;
+        border-left: 5px solid white;
         border-bottom: 1px solid rgba(0, 0, 0, 0.075);
         box-sizing: border-box;
         cursor: pointer;
@@ -50,6 +53,7 @@
     }
   }
   &__each {
+    background-color: white;
     display: flex;
     height: 60px;
     padding: 14.4px 18px;

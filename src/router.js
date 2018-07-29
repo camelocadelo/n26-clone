@@ -1,7 +1,7 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Login from "./views/Login.vue";
-import About from "./views/About.vue";
+import Account from "./views/Account.vue";
 import Transactions from "./views/Transactions.vue";
 // import auth from "@/lib/login/";
 
@@ -15,9 +15,9 @@ export default new Router({
       component: Login
     },
     {
-      path: "/about",
-      name: "about",
-      component: About
+      path: "/account",
+      name: "account",
+      component: Account
     },
     {
       path: "/transactions",
