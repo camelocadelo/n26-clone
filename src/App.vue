@@ -1,17 +1,33 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <navbar></navbar>
-    </div>
+      <navbar v-if="isAuthenticated"></navbar>
     <router-view/>
   </div>
 </template>
 <script>
 import Navbar from "./components/Navbar.vue";
+import auth from "@/lib/login/";
+import { mapGetters, mapActions } from "vuex";
 export default {
-  name: "Transactions",
+  name: "N26",
   components: {
     Navbar
+  },
+  computed: {
+    ...mapGetters({
+      isAuthenticated: "authenticated"
+    })
+  },
+  methods: {
+    ...mapActions({
+      setAuthentication: "setAuthentication"
+    })
+  },
+  mounted() {
+    if (auth.checkUser()) {
+      this.setAuthentication(true);
+      this.$router.replace(this.$route.query.redirect || "/transactions");
+    }
   }
 };
 </script>
@@ -19,18 +35,6 @@ export default {
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 body {
-  background-color: #FBFBFB;
-  }
-#nav {
-  padding: 30px;
-  text-align: center;
-  z-index: 2;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #3bd0d6;
-    }
-  }
+  background-color: #fbfbfb;
 }
 </style>

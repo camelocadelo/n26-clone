@@ -94,7 +94,7 @@ export default {
     transition: 0.3s;
   }
   .ticket:hover {
-    border-left-color: #3bd0d6;
+    border-left-color: deepskyblue;
   }
   &__card {
     height: 100%;

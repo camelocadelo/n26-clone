@@ -1,6 +1,5 @@
 <template>
   <div class="transactions-big">
-    <t-nav></t-nav>
     <transactions-list> </transactions-list>
   </div>
 </template>

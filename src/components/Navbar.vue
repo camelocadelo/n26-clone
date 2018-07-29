@@ -20,5 +20,5 @@ export default {
   name: "Navbar"
 };
 </script>
-<style src="../scss/nav.scss" lang="scss" scoped>
+<style src="../scss/nav.scss" lang="scss" >
 </style>

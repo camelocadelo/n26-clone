@@ -50,7 +50,7 @@
       display: inline-block;
     }
     a:hover {
-      color: #3bd0d6;
+      color: deepskyblue;
     }
     button {
       border-radius: 5px;
@@ -81,24 +81,24 @@
       transform: translateY(0);
     }
     .btn_login{
-      background-color: #3bd0d6;
+      background-color: deepskyblue;
       color: white;
     }
     .btn_login:hover{
-      color: #3bd0d6;
+      color: deepskyblue;
     }
     .btn_login::after {
       background-color: white;      
     }
     .btn_signup{
       background-color: white;
-      color: #3bd0d6;
+      color: deepskyblue;
     }
     .btn_signup:hover{
       color: white;
     }
     .btn_signup::after {
-      background-color: #3bd0d6;
+      background-color: deepskyblue;
     }
   }
 }
@@ -128,6 +128,7 @@
   color: rgb(215, 55, 55);
   width: 350px;
   font-size: 0.9rem;
+  text-align: left;
   span {
     display: inline-block;
     margin: 5px;

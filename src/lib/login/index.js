@@ -1,22 +1,26 @@
 let loggedIn = false;
+
 const requireAuth = (to, from, next) => {
   if (!loggedIn) {
     next({
-      path: "/login",
+      path: "/",
       query: { redirect: to.fullPath }
     });
   } else {
     next();
   }
 };
+
 const isLoggedIn = value => {
   loggedIn = value;
 };
+
 const storeUserInfo = userDetails => {
   if (isJSON(userDetails)) {
     setCookie(JSON.parse(userDetails).mintSessionId);
   }
 };
+
 const isJSON = data => {
   try {
     JSON.parse(data);
@@ -25,9 +29,11 @@ const isJSON = data => {
   }
   return true;
 };
+
 const setCookie = sessionId => {
   document.cookie = "sessionID =" + sessionId;
 };
+
 const getCookie = cname => {
   const name = cname + "=";
   const decodedCookie = decodeURIComponent(document.cookie);
@@ -41,6 +47,7 @@ const getCookie = cname => {
   }
   return "";
 };
+
 const checkUser = () => {
   if (getCookie("sessionID")) {
     loggedIn = true;
@@ -49,10 +56,12 @@ const checkUser = () => {
     return false;
   }
 };
+
 const logout = () => {
   document.cookie = "sessionID=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
   loggedIn = false;
 };
+
 export default {
   isLoggedIn,
   requireAuth,
