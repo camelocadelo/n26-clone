@@ -1,0 +1,99 @@
+.signup {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  &__form {
+     
+      height: 100%;
+      width: 50%;
+      background-color: deepskyblue;
+      box-sizing: border-box;
+      color: white;
+      font-size: 0.9em;
+      font-weight: bold;
+      display: inline-block;
+      form {
+      width: 70%;
+      padding-left: 20%;
+      position: relative;
+      float: right;
+      height: 100%;
+      padding-top: 10%;
+      h1 {
+          font-size: 2.3rem;
+      }
+      input, label {
+          display: block;
+      }
+      input, button {
+          width: 90%;
+          height: 40px;
+          margin: 10px 0 20px 0;
+          border-radius: 3px;
+          border: none;
+          background-color: white;
+      }
+      button {
+          margin-top: 50px;
+          color: deepskyblue;
+          font-family: "Open Sans", sans-serif;
+          border: 3px solid #009fff;
+          font-weight: bold;
+          height: 50px;
+          transition: 0.3s;
+          cursor: pointer;
+          &:hover {
+          border-color: #007fff;        
+          }
+      }
+      p {
+          font-size: 0.8rem;
+          font-weight: lighter;
+          margin-bottom: 10%;
+          color: rgba(255, 255, 255, 0.7);
+          strong {
+          color: rgba(255, 255, 255, 1);
+          cursor: pointer;
+          }
+      }
+      }
+  }
+  &__sidebar {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    &__header {
+      height: 60px;
+      top: 0;
+      position: relative;
+      width: 100%;
+      text-align:right;
+      padding:40px;
+      span {
+        margin-right: 20px;
+      }
+      .login-btn{
+        border: 2px solid deepskyblue;
+        border-radius: 3px;
+        color: deepskyblue;
+        padding: 5px 25px;
+        text-decoration: none;
+        transition: 0.3s;
+        &:hover {
+          background-color: deepskyblue;
+          color: white;
+        }
+      }
+    }
+    &__footer {
+      border: 1px solid red;
+      position: absolute;
+      bottom: 40px;
+    }
+  }
+}

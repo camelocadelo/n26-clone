@@ -16,7 +16,7 @@
       <input v-bind:class="{ redBorderBtm: error }" v-model="password" type="password" placeholder="Password" class="password">
       <a href='#'>Forgot your password ?</a>
       <button class="btn_login">Login</button>
-      <button class="btn_signup">Create an account</button>
+      <router-link class="btn_signup" to="/signup"> Create an account</router-link>
     </form>
   </div>
 </template>

@@ -93,6 +93,38 @@
     .btn_signup{
       background-color: white;
       color: deepskyblue;
+      border-radius: 5px;
+      margin: 10px 0;
+      font-size: 16px;
+      line-height: 1.2;
+      font-weight: bold;
+      cursor: pointer;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      transition: 0.2s ease-in-out;
+      width: 100%;
+      height: 43px;
+      border: none;
+      font-family: "Open Sans", sans-serif;
+      font-size: 90%;
+      padding: 12px;
+    }
+    .btn_signup::after {
+      content: "";
+      position: absolute;
+      transition: 0.2s ease-in-out;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      -webkit-transform: translateY(100%);
+      transform: translateY(100%);
+    }
+    .btn_signup:hover::after {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
     }
     .btn_signup:hover{
       color: white;
