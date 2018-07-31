@@ -7,9 +7,8 @@
   -moz-osx-font-smoothing: grayscale;
   display: flex;
   &__form {
-     
       height: 100%;
-      width: 50%;
+      width: 65%;
       background-color: deepskyblue;
       box-sizing: border-box;
       color: white;
@@ -18,11 +17,11 @@
       display: inline-block;
       form {
       width: 70%;
-      padding-left: 20%;
+      padding-left: 25%;
       position: relative;
       float: right;
       height: 100%;
-      padding-top: 10%;
+      padding-top: 100px;
       h1 {
           font-size: 2.3rem;
       }
@@ -36,11 +35,15 @@
           border-radius: 3px;
           border: none;
           background-color: white;
+          font-family: "Open Sans", sans-serif;
+
+      }
+      input {
+        padding-left: 10px; 
       }
       button {
           margin-top: 50px;
           color: deepskyblue;
-          font-family: "Open Sans", sans-serif;
           border: 3px solid #009fff;
           font-weight: bold;
           height: 50px;
@@ -55,6 +58,7 @@
           font-weight: lighter;
           margin-bottom: 10%;
           color: rgba(255, 255, 255, 0.7);
+          width: 90%;
           strong {
           color: rgba(255, 255, 255, 1);
           cursor: pointer;
@@ -63,9 +67,12 @@
       }
   }
   &__sidebar {
+    background: url(../assets/img/sidebar-bg.jpg) no-repeat;
+    background-size:100% 100%;
     display: inline-block;
-    width: 50%;
+    width: 35%;
     height: 100%;
+    color: white;
     box-sizing: border-box;
     &__header {
       height: 60px;

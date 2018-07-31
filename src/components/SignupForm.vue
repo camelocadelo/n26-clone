@@ -10,7 +10,7 @@
       <label for="phone">Your phone number:</label>
       <input name="phone" type="phone">
       <button>Sign up</button>
-      <p>By clicking on signup you agree to our <strong> Terms of Service and<br> Privacy Policy. </strong> </p>
+      <p>By clicking on signup you agree to our <strong> Terms of Service and Privacy Policy. </strong> </p>
     </form>
   </div>
 </template>

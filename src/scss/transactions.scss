@@ -4,7 +4,7 @@
   -moz-osx-font-smoothing: grayscale;  
   border-radius: 5px;
   width: 850px;
-  margin: 10px auto;
+  margin: 80px auto;
   display: block;
   padding: 27px 18px;
   &__details {
@@ -24,7 +24,7 @@
     }
   }
   &__all {
-    padding: 0px;
+    padding: 10px 0px;
     ul {
       display: block;
       list-style: none;
@@ -57,6 +57,7 @@
     display: flex;
     height: 60px;
     padding: 14.4px 18px;
+    box-sizing: content-box;
     &__icon {
       font-size: 36px;
       flex-grow: 1;

@@ -91,6 +91,8 @@ export default {
     margin: 10px 14px 10px 0px;
     border-left: 5px solid white;
     cursor: pointer;
+    box-sizing: content-box;
+
     transition: 0.3s;
   }
   .ticket:hover {
