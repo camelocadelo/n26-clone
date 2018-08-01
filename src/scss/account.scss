@@ -4,8 +4,8 @@
   -moz-osx-font-smoothing: grayscale;
   border-radius: 5px;
   width: 850px;
-  margin: 80px auto;
-  padding: 27px 18px;
+  margin: 100px auto;
+  padding: 30px 18px;
 
   &__first {
     display: flex;
@@ -21,7 +21,7 @@
     position: relative;
     display: block;
     h1 {
-      font-size: 24px;
+      font-size:1.8rem;
     }
   }
   &__membership {

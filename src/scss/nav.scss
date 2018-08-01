@@ -18,7 +18,7 @@
 .container {
   width: 100%;
   display: flex;
-  padding: 30px 40px;
+  padding: 35px 40px;
   font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -65,4 +65,10 @@
       color: inherit;
     }
   }
+}
+
+.bg {
+  background: white;
+  box-shadow: 0 0.08em 0.25em 0.075em rgba(0, 0, 0, 0.075);
+  transition: 0.3s;
 }
