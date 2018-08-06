@@ -5,8 +5,9 @@
       <h1 class="transactions__details__balance">€2,004.31</h1>
       <h5 class="transactions__details__label">Account Balance</h5>
     </div>
-    <h3>Earlier this week</h3>
+   
     <div class="transactions__all">
+      <h3>Earlier this week</h3>
       <ul>
         <li>
           <div class="transactions__each">
@@ -24,8 +25,9 @@
         </li>
       </ul>
     </div>
-    <h3>Eralier this month</h3>
+    
     <div class="transactions__all">
+      <h3>Eralier this month</h3>
       <ul>
         <li>
           <div class="transactions__each">

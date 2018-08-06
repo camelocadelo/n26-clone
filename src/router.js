@@ -3,6 +3,7 @@ import Router from "vue-router";
 import Login from "./views/Login.vue";
 import Account from "./views/Account.vue";
 import CardSettings from "./components/account/CardSettings.vue";
+import AppSettings from "./components/account/AppSettings.vue";
 import Transactions from "./views/Transactions.vue";
 import Signup from "./views/Signup.vue";
 import auth from "@/lib/login/";
@@ -20,6 +21,12 @@ export default new Router({
       path: "/account",
       name: "account",
       component: Account,
+      beforeEnter: auth.requireAuth
+    },
+    {
+      path: "/account/app-settings",
+      name: "AppSettings",
+      component: AppSettings,
       beforeEnter: auth.requireAuth
     },
     {

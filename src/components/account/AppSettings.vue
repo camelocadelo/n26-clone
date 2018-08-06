@@ -1,50 +1,31 @@
 <template>
-  <div class="card-settings">
+  <div class="app-settings">
     <div class="box">
       <div class="intro">
-        <h1>Cards Settings</h1>
+        <h1>App Settings</h1>
         <router-link to="/account">
           <i class="fas fa-angle-left"></i>
           back to my account
         </router-link>
       </div>
-      <h4>Cards</h4>
-      <div class="info">
-        <div class="photo">
-          <img src="@/assets/img/card.jpg">
-        </div>
-        <div class="gear">
-          <h4>Frank’s Business card </h4>
-          <div class="gear__item">
-            <i class="fas fa-lock"></i>
-            <div class="gear__item--title">
-              <span>Lock card</span>
-              <p>Lock your card within seconds</p>
-            </div>
-          </div>
-          <div class="gear__item"> 
-            <i class="far fa-envelope"></i>
-            <div class="gear__item--title">
-              <span> Reorder card</span>
-              <p> Stolen, Lost, or broken card?</p>
-            </div>
-          </div>
-          <div class="gear__item"> 
-            <i class="fas fa-undo"></i>
-            <div class="gear__item--title">
-              <span> Reset PIN</span>
-              <p> Change your card PIN</p>
-            </div> 
-          </div>
-        </div>
+    <div class="content"> 
+      <div class="language">
+        <h4>Change language</h4>
+        <ul>
+          <li> <span><img src="@/assets/svg/de.svg"></span><div class="name">Deutsch </div> <i class="far fa-check-circle"></i></li>
+          <li> <span><img src="@/assets/svg/en.svg"></span><div class="name">English</div>  <i class=" current fas fa-check-circle"></i></li>
+          <li> <span><img src="@/assets/svg/fr.svg"></span><div class="name">Français</div>   <i class="far fa-check-circle"></i></li>
+          <li> <span><img src="@/assets/svg/es.svg"></span><div class="name">Español</div>  <i class=" far fa-check-circle"></i></li>
+          <li> <span><img src="@/assets/svg/it.svg"></span><div class="name">Italiano</div>  <i class=" far fa-check-circle"></i></li>
+        </ul>
       </div>
-      <div class="bottom-shelf">
-        <div class="usage">
+      <div class="usage">
+        <h4>Appearance</h4>
           <ul>
             <li>
               <div class="usage__text">
-                <span>ATM Withdrawals</span>
-                <p>Allow cash Withdrawals from ATMs </p>
+                <span>Reduced motion</span>
+                <p>Toggle all animations across the web-app</p>
               </div>
               <label class="switch">
                 <input type="checkbox" checked>
@@ -53,8 +34,8 @@
             </li>
             <li>
               <div class="usage__text">
-                <span>Online payments</span>
-                <p>Allow payments online? </p>
+                <span>Discreet Mode</span>
+                <p>Hides all potentially sensitive data</p>
               </div>
               <label class="switch">
                 <input type="checkbox" checked>
@@ -63,8 +44,8 @@
             </li>
             <li>
               <div class="usage__text">
-                <span>Payments abroad</span>
-                <p>Allow payments in other countries? </p>
+                <span>Dark mode</span>
+                <p>Come to the dark side </p>
               </div>
               <label class="switch">
                 <input type="checkbox" checked>
@@ -73,26 +54,28 @@
             </li>
           </ul>
         </div>
-        <div class="limits">
-        </div>
-      </div> 
-    </div> 
+      </div>
+    </div>
   </div>
+
 </template>
 
 <script>
 export default {
-  name: "CardSettings"
+  name: "AppSettings"
 };
 </script>
-
-<style lang="scss" scoped>
-.card-settings {
+<style src="@/scss/style.scss" lang="scss" >
+</style>
+<style lang="scss" >
+.app-settings {
   font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fbfbfb;
   height: 100%;
+  background-color: #fbfbfb;
+  border: 1px solid transparent;
+
   .box {
     width: 50%;
     padding: 20px 18px;
@@ -100,6 +83,9 @@ export default {
     height: 100%;
     position: relative;
     bottom: 0px;
+    .content {
+      display: flex;
+    }
     .intro {
       margin-bottom: 80px;
       a {
@@ -107,66 +93,72 @@ export default {
           text-decoration: underline;
         }
       }
-    }
-    h1 {
-      font-size: 1.5em;
-    }
-    a {
-      text-decoration: none;
-      color: rgba(0, 0, 0, 0.8);
-    }
-    .info {
-      display: flex;
-      .photo {
-        img {
-          width: 450px;
-          height: 280px;
-        }
+      h1 {
+        font-size: 1.5em;
       }
-      .gear {
-        margin-left: 20px;
-        h4 {
-          margin: 0 0 15px 0;
-        }
-        &__item {
-          display: flex;
-          cursor: pointer;
-          margin: 20px 0;
-          &:hover span {
-            border-bottom: 3px solid deepskyblue;
-          }
-          &--title {
-            p {
-              margin-top: 5px;
-              font-size: 12px;
-              color: rgba(0, 0, 0, 0.5);
-            }
-          }
-          i {
-            font-size: 34px;
-            padding: 10px 20px;
-          }
-        }
+      a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.8);
       }
     }
-    .bottom-shelf {
-      display: flex;
-      margin-top: 50px;
-    }
-    .usage {
-      width: 50%;
+    .language {
+      width: 40%;
       ul {
-        background: white;
+        list-style: none;
+        background-color: white;
+        margin: 0px;
+        padding: 0px;
         box-shadow: 0 0.08em 0.25em 0.075em rgba(0, 0, 0, 0.075);
         border-radius: 8px;
+        li {
+          padding: 12px 18px;
+          border-bottom: 1px solid lightgrey;
+          cursor: pointer;
+          transition: 0.3s;
+          &:last-child {
+            border: none;
+          }
+          &:hover i {
+            opacity: 1;
+            transition: 0.3s;
+          }
+          span {
+            margin-right: 20px;
+            top: 5px;
+            position: relative;
+          }
+          i {
+            color: deepskyblue;
+            font-size: 1.3em;
+            position: relative;
+            transition: 0.3s;
+            opacity: 0;
+          }
+          .name {
+            width: 80%;
+            display: inline-block;
+          }
+          .current {
+            opacity: 1;
+          }
+        }
+      }
+    }
+    .usage {
+      margin-left: 30px;
+      width: 40%;
+      ul {
+        list-style: none;
+        background-color: white;
+        margin: 0px;
         padding: 0px;
-        width: 90%;
+        box-shadow: 0 0.08em 0.25em 0.075em rgba(0, 0, 0, 0.075);
         li {
           background-color: white;
           display: flex;
-          height: 60px;
+          height: 50px;
           padding-left: 0px;
-          padding: 14.4px 18px;
+          padding: 10px 18px;
           box-sizing: content-box;
           border-bottom: 1px solid lightgray;
           list-style: none;
@@ -175,9 +167,9 @@ export default {
           }
           .switch {
             position: relative;
-            width: 60px;
-            height: 34px;
-            margin: 20px;
+            width: 40px;
+            height: 20px;
+            margin: 10px;
             flex-grow: 1;
             input {
               display: none;
@@ -188,9 +180,9 @@ export default {
                 box-shadow: 0 0 1px deepskyblue;
               }
               &:checked + .slider:before {
-                -webkit-transform: translateX(26px);
+                -webkit-transform: translateX(16px);
                 -ms-transform: translateX(26px);
-                transform: translateX(26px);
+                transform: translateX(20px);
               }
             }
             .slider {
@@ -207,9 +199,9 @@ export default {
               &:before {
                 position: absolute;
                 content: "";
-                height: 28px;
-                width: 28px;
-                left: 5px;
+                height: 14px;
+                width: 14px;
+                left: 3px;
                 bottom: 3px;
                 background-color: white;
                 -webkit-transition: 0.4s;
@@ -227,10 +219,6 @@ export default {
           }
         }
       }
-    }
-    .limits {
-      border: 1px solid deeppink;
-      width: 50%;
     }
   }
 }
