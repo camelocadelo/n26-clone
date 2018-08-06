@@ -37,10 +37,12 @@
   }
   &__transactions {
     order: 2;
-    flex-grow: 3.5;
     top: 5px;
     left: 42px;
     position: relative;
+    width: 63%;
+    padding: 0px 18px;
+
     .fa-list {
       margin-right: 15px;
       font-size: 20px;

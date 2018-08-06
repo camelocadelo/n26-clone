@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  background-color: #fbfbfb;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+}
+#app {
+  height: 100%;
+  font-family: "Open Sans", sans-serif;
+}
+h1 {
+    font-size: 1.8rem;
+  }
+router-link {
+  text-decoration: none;
+  color: black;
+
+}
+router-link:active {
+  text-decoration: none;
+  color: black;
+}
+router-link:visited {
+  text-decoration: none;
+  color: black;
+}

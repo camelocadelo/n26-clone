@@ -1,67 +1,138 @@
-.accountInfo {
-  font-family: "Open Sans", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  border-radius: 5px;
-  width: 850px;
-  margin: 100px auto;
-  padding: 30px 18px;
+.account {
 
-  &__first {
-    display: flex;
-    h4 {
-      width: 100%;
+  &__info {
+    font-family: "Open Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    border-radius: 5px;
+    width: 60%;
+    margin: 100px auto;
+    padding: 30px 18px;
+    flex-grow: 3.5;
+    &__first {
+      display: flex;
+      h4 {
+        width: 100%;
+      }
     }
-  }
-  &__second {
-    display: flex;
-    
-  }
-  &__details {
-    position: relative;
-    display: block;
-    h1 {
-      font-size:1.8rem;
+    &__second {
+      display: flex;
+      
     }
-  }
-  &__membership {
-    position: relative;
-    display: inline-block;
-    border-radius: 8px;
-    height: 230px;
-    background-color: white;
-    flex-grow: 5;
-    padding: 13px 18px;
-    box-shadow: 0 0.08em 0.25em 0.075em rgba(0, 0, 0, 0.075);
-    margin-right: 30px; 
-    box-sizing: content-box;
-    h2 {
-      margin-bottom: 90px;
+    &__details {
+      position: relative;
+      display: block;
+      h1 {
+        font-size:1.8rem;
+      }
     }
-    span {
-      position: absolute;
-      bottom: 10px;
-      right: 10px;
-      line-height: 80%;
-      font-size: 12px;
-      color: grey!important;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      text-transform: uppercase;
-    }
-  }
-  &__type {
-    position: relative;
-    display: inline-block;
-    border-radius: 8px;
-    flex-grow: 5;
-    padding: 0px 18px;
-    &--text{
-      margin: 20px 0px;
+    &__membership {
+      position: relative;
+      display: inline-block;
+      border-radius: 8px;
+      height: 230px;
+      background-color: white;
+      flex-grow: 5;
+      padding: 13px 18px;
+      box-shadow: 0 0.08em 0.25em 0.075em rgba(0, 0, 0, 0.075);
+      margin-right: 30px; 
+      box-sizing: content-box;
+      h2 {
+        margin-bottom: 90px;
+      }
       span {
-        font-size: 14px;
-        color: grey;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        line-height: 80%;
+        font-size: 12px;
+        color: grey!important;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-transform: uppercase;
+      }
+    }
+    &__type {
+      position: relative;
+      display: inline-block;
+      border-radius: 8px;
+      flex-grow: 5;
+      padding: 0px 18px;
+      &--text{
+        margin: 20px 0px;
+        span {
+          font-size: 14px;
+          color: grey;
+        }
       }
     }
   }
+  &__setting {
+    font-family: "Open Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    border-radius: 5px;
+    margin: 10px auto;
+    padding: 27px 18px;
+    width: 60%;
+    .ticket {
+      background-color: white;
+      height: 60px;
+      padding: 14.4px 18px;
+      box-shadow: 0 0.08em 0.25em 0.075em rgba(0, 0, 0, 0.075);
+      width: 42%;
+      display: inline-block;
+      border-radius: 5px;
+      margin: 10px 14px 10px 0px;
+      border-left: 5px solid white;
+      cursor: pointer;
+      box-sizing: content-box;
+      transition: 0.3s;
+    }
+    .ticket:hover {
+      border-left-color: deepskyblue;
+    }
+    &__card {
+      height: 100%;
+      &__icon {
+        font-size: 26px;
+        display: inline-block;
+        text-align: left;
+        position: relative;
+        top: 0%;
+        color: black;
+
+      }
+      &__text {
+        display: inline-block;
+        margin: 0px 14px;
+        color: black;
+        p {
+          margin: 0;
+          color: rgba(0, 0, 0, 0.575);
+          font-size: 13px;
+        }
+      }
+      &__arrow {
+        position: relative;
+        color: lightgrey;
+        font: 1.3em sans-serif;
+        float: right;
+        right: 0px;
+        top: 20px;
+      }
+    }
+  }
+}
+
+router-link {
+  text-decoration: none;
+}
+router-link:active {
+  text-decoration: none;
+  color: black;
+}
+router-link:visited {
+  text-decoration: none;
+  color: black;
 }

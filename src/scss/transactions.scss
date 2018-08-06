@@ -4,14 +4,11 @@
   -moz-osx-font-smoothing: grayscale;  
   border-radius: 5px;
   width: 850px;
-  margin: 80px auto;
+  margin: 100px auto;
   display: block;
-  padding: 27px 18px;
+  padding: 30px 18px;
   &__details {
     text-align: left;
-    h1 {
-      font-size: 24px;
-    }
     &__balance {
       font-size: 40px !important;
     }

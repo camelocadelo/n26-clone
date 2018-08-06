@@ -1,13 +1,13 @@
 
 <template>
-  <div class="account-big">
+  <div class="account">
     <account-info></account-info>
     <account-setting></account-setting>
   </div>
 </template>
 <script>
-import AccountInfo from "../components/AccountInfo.vue";
-import AccountSetting from "../components/AccountSetting.vue";
+import AccountInfo from "../components/account/AccountInfo.vue";
+import AccountSetting from "../components/account/AccountSetting.vue";
 export default {
   name: "account",
   components: {

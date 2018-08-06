@@ -17,7 +17,7 @@ export default {
 
 <style lang="scss" scoped>
 .home {
-  background: url("../assets/img/bg4.jpg") fixed no-repeat;
+  background: url("../assets/img/bg6.jpg") fixed no-repeat;
   background-size: 100% 100%;
   width: 100%;
   height: 100vh;

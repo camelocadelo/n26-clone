@@ -2,7 +2,7 @@
   <div class="transactions">
     <div class="transactions__details">
       <h1>Transactions</h1>
-      <h1 class="transactions__details__balance">-€656.31</h1>
+      <h1 class="transactions__details__balance">€2,004.31</h1>
       <h5 class="transactions__details__label">Account Balance</h5>
     </div>
     <h3>Earlier this week</h3>

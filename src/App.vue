@@ -31,23 +31,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss">
-@import url("https://fonts.googleapis.com/css?family=Open+Sans");
-* {
-  box-sizing: border-box;
-}
-html {
-  width: 100%;
-  height: 100%;
-}
-body {
-  background-color: #fbfbfb;
-  width: 100%;
-  height: 100%;
-  margin: 0px;
-}
-#app {
-  height: 100%;
-}
-</style>
