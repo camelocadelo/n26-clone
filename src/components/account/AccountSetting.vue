@@ -46,7 +46,7 @@
       </div>
     </router-link>
 
-    <router-link to="/account/app-settings">    
+    <router-link to="/account/security-settings">    
       <div class="ticket account__setting__security">
         <div class="account__setting__card__icon">
           <i class="fas fa-user-secret"></i>

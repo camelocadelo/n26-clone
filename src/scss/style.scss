@@ -32,3 +32,33 @@ router-link:visited {
   text-decoration: none;
   color: black;
 }
+.box {
+  width: 50%;
+  padding: 20px 18px;
+  margin: 100px auto;
+  height: 100%;
+  position: relative;
+  bottom: 0px;
+  .intro {
+    margin-bottom: 80px;
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+  a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8);
+  }
+}
+.box-shadow {
+  box-shadow: 0 0.08em 0.25em 0.075em rgba(0, 0, 0, 0.075);
+}
+.support-text {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 12.5px;
+}

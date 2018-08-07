@@ -11,7 +11,7 @@
     <div class="content"> 
       <div class="language">
         <h4>Change language</h4>
-        <ul>
+        <ul class="box-shadow">
           <li> <span><img src="@/assets/svg/de.svg"></span><div class="name">Deutsch </div> <i class="far fa-check-circle"></i></li>
           <li> <span><img src="@/assets/svg/en.svg"></span><div class="name">English</div>  <i class=" current fas fa-check-circle"></i></li>
           <li> <span><img src="@/assets/svg/fr.svg"></span><div class="name">Français</div>   <i class="far fa-check-circle"></i></li>
@@ -21,7 +21,7 @@
       </div>
       <div class="usage">
         <h4>Appearance</h4>
-          <ul>
+          <ul class="box-shadow">
             <li>
               <div class="usage__text">
                 <span>Reduced motion</span>
@@ -75,31 +75,8 @@ export default {
   height: 100%;
   background-color: #fbfbfb;
   border: 1px solid transparent;
-
-  .box {
-    width: 50%;
-    padding: 20px 18px;
-    margin: 100px auto;
-    height: 100%;
-    position: relative;
-    bottom: 0px;
     .content {
       display: flex;
-    }
-    .intro {
-      margin-bottom: 80px;
-      a {
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-      h1 {
-        font-size: 1.5em;
-      }
-      a {
-        text-decoration: none;
-        color: rgba(0, 0, 0, 0.8);
-      }
     }
     .language {
       width: 40%;
@@ -108,7 +85,6 @@ export default {
         background-color: white;
         margin: 0px;
         padding: 0px;
-        box-shadow: 0 0.08em 0.25em 0.075em rgba(0, 0, 0, 0.075);
         border-radius: 8px;
         li {
           padding: 12px 18px;
@@ -152,7 +128,6 @@ export default {
         background-color: white;
         margin: 0px;
         padding: 0px;
-        box-shadow: 0 0.08em 0.25em 0.075em rgba(0, 0, 0, 0.075);
         li {
           background-color: white;
           display: flex;
@@ -220,6 +195,5 @@ export default {
         }
       }
     }
-  }
 }
 </style>
