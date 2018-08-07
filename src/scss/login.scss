@@ -10,6 +10,7 @@
   color: #2c3e50;
   h1 {
     font-size: 26px;
+    color: #fbfbfb;
   }
   form {
     width: 350px;
@@ -40,7 +41,7 @@
     }
     a {
       text-decoration: none;
-      color: black;
+      color: white;
       transition: 250ms;
       margin-bottom: 20px;
       display: inline-block;
@@ -147,6 +148,7 @@
   max-width: 80px;
   fill: currentcolor;
   color: inherit;
+  color: #fbfbfb;
   margin-left: auto;
   margin-right: auto;
 }
