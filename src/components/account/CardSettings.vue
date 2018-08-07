@@ -40,7 +40,7 @@
       </div>
       <div class="bottom-shelf">
         <div class="usage">
-          <ul>
+          <ul class="box-shadow">
             <li>
               <div class="usage__text">
                 <span>ATM Withdrawals</span>
@@ -93,28 +93,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   background-color: #fbfbfb;
   height: 100%;
-  .box {
-    width: 50%;
-    padding: 20px 18px;
-    margin: 100px auto;
-    height: 100%;
-    position: relative;
-    bottom: 0px;
-    .intro {
-      margin-bottom: 80px;
-      a {
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-    h1 {
-      font-size: 1.5em;
-    }
-    a {
-      text-decoration: none;
-      color: rgba(0, 0, 0, 0.8);
-    }
+
     .info {
       display: flex;
       .photo {
@@ -157,7 +136,6 @@ export default {
       width: 50%;
       ul {
         background: white;
-        box-shadow: 0 0.08em 0.25em 0.075em rgba(0, 0, 0, 0.075);
         border-radius: 8px;
         padding: 0px;
         width: 90%;
@@ -232,6 +210,5 @@ export default {
       border: 1px solid deeppink;
       width: 50%;
     }
-  }
 }
 </style>

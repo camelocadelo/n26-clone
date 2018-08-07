@@ -1,236 +1,141 @@
 <template>
-  <div class="card-settings">
+  <div class="security-settings">
     <div class="box">
       <div class="intro">
-        <h1>Cards Settings</h1>
+        <h1>Security Settings</h1>
         <router-link to="/account">
           <i class="fas fa-angle-left"></i>
           back to my account
         </router-link>
       </div>
-      <h4>Cards</h4>
-      <div class="info">
-        <div class="photo">
-          <img src="@/assets/img/card.jpg">
-        </div>
-        <div class="gear">
-          <h4>Frank’s Business card </h4>
-          <div class="gear__item">
-            <i class="fas fa-lock"></i>
-            <div class="gear__item--title">
-              <span>Lock card</span>
-              <p>Lock your card within seconds</p>
+      <div class="language">
+        <h4>Change password</h4>
+        <div class="password-changer box-shadow ">
+          <form @submit.prevent>
+            <label for="current">Current password</label>
+            <input :type="passwordTypeold" v-model="passwordModelold" name="current">
+            <div class="show-box">
+              <button @click="showPasswordold" ><i class="far fa-eye"></i> show</button>
             </div>
-          </div>
-          <div class="gear__item"> 
-            <i class="far fa-envelope"></i>
-            <div class="gear__item--title">
-              <span> Reorder card</span>
-              <p> Stolen, Lost, or broken card?</p>
+            <label for="new">new password</label>
+            <input :type="passwordType" v-model="passwordModel"  name="new">
+            <div class="show-box">
+              <button @click="showPassword"> <i class="far fa-eye"></i> show</button>
             </div>
-          </div>
-          <div class="gear__item"> 
-            <i class="fas fa-undo"></i>
-            <div class="gear__item--title">
-              <span> Reset PIN</span>
-              <p> Change your card PIN</p>
-            </div> 
-          </div>
+            <label for="strength">Strength</label>
+            <div class="rg-bar">
+              <div class="highlight"></div>
+            </div>
+            <p class="support-text">Password should be long enough, unique to you, and difficult for others to guess.</p>
+            <button class="btn-submit" type="submit">Set new password</button>
+          </form>
         </div>
       </div>
-      <div class="bottom-shelf">
-        <div class="usage">
-          <ul>
-            <li>
-              <div class="usage__text">
-                <span>ATM Withdrawals</span>
-                <p>Allow cash Withdrawals from ATMs </p>
-              </div>
-              <label class="switch">
-                <input type="checkbox" checked>
-                <span class="slider"></span>
-              </label>
-            </li>
-            <li>
-              <div class="usage__text">
-                <span>Online payments</span>
-                <p>Allow payments online? </p>
-              </div>
-              <label class="switch">
-                <input type="checkbox" checked>
-                <span class="slider"></span>
-              </label>
-            </li>
-            <li>
-              <div class="usage__text">
-                <span>Payments abroad</span>
-                <p>Allow payments in other countries? </p>
-              </div>
-              <label class="switch">
-                <input type="checkbox" checked>
-                <span class="slider"></span>
-              </label>
-            </li>
-          </ul>
-        </div>
-        <div class="limits">
-        </div>
-      </div> 
     </div> 
   </div>
 </template>
 
 <script>
 export default {
-  name: "CardSettings"
+  name: "CardSettings",
+  data() {
+    return {
+    passwordModel:'',
+    passwordType:'password',
+    passwordModelold:'',
+    passwordTypeold:'password',
+    }
+  },
+  methods: {
+    showPassword () {
+      this.passwordType = this.passwordType === 'password' ? 'text' : 'password';
+    },
+    showPasswordold () {
+      this.passwordTypeold = this.passwordTypeold === 'password' ? 'text' : 'password';
+    },
+    checkPassword () {
+      
+    }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
-.card-settings {
+.security-settings {
   font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #fbfbfb;
   height: 100%;
-  .box {
-    width: 50%;
-    padding: 20px 18px;
-    margin: 100px auto;
-    height: 100%;
-    position: relative;
-    bottom: 0px;
-    .intro {
-      margin-bottom: 80px;
-      a {
-        &:hover {
-          text-decoration: underline;
+  border: 1px solid deeppink;
+  .password-changer {
+    background-color: white;
+    width: 60%;
+    label,
+    input,
+    button {
+      display: block;
+    }
+    form {
+      width: 90%;
+      margin: 15px auto;
+      padding: 15px;
+      .btn-submit {
+        height: 30px;
+        border: none;
+        background: deepskyblue;
+        color: white;
+        font-family: "Open Sans", sans-serif;
+        padding: 5px 30px;
+        box-sizing: content-box;
+        border-radius: 5px;
+        font-size: 1em;
+        cursor: pointer;
+      }
+      input {
+        border: none;
+        width: 100%;
+        border-bottom: 2px solid lightgrey;
+        margin: 20px auto 8px;
+        position: relative;
+        padding-bottom: 10px;
+        box-sizing: border-box;
+        transition: 0.3s;
+        &:focus {
+          outline: none;
+          border-bottom: 2px solid deepskyblue;
         }
       }
-    }
-    h1 {
-      font-size: 1.5em;
-    }
-    a {
-      text-decoration: none;
-      color: rgba(0, 0, 0, 0.8);
-    }
-    .info {
-      display: flex;
-      .photo {
-        img {
-          width: 450px;
-          height: 280px;
-        }
+      label {
+        margin: 0px;
+        font-size: 0.8em;
+        font-weight: bold;
       }
-      .gear {
-        margin-left: 20px;
-        h4 {
-          margin: 0 0 15px 0;
-        }
-        &__item {
-          display: flex;
+      .show-box {
+        align-self: flex-end;
+        height: 30px;
+        button {
+          float: right;
+          background: none;
+          border: none;
           cursor: pointer;
-          margin: 20px 0;
-          &:hover span {
-            border-bottom: 3px solid deepskyblue;
-          }
-          &--title {
-            p {
-              margin-top: 5px;
-              font-size: 12px;
-              color: rgba(0, 0, 0, 0.5);
-            }
-          }
-          i {
-            font-size: 34px;
-            padding: 10px 20px;
+          &:focus {
+            outline: none;
           }
         }
       }
-    }
-    .bottom-shelf {
-      display: flex;
-      margin-top: 50px;
-    }
-    .usage {
-      width: 50%;
-      ul {
-        background: white;
-        box-shadow: 0 0.08em 0.25em 0.075em rgba(0, 0, 0, 0.075);
-        border-radius: 8px;
-        padding: 0px;
-        width: 90%;
-        li {
-          background-color: white;
-          display: flex;
-          height: 60px;
-          padding-left: 0px;
-          padding: 14.4px 18px;
-          box-sizing: content-box;
-          border-bottom: 1px solid lightgray;
-          list-style: none;
-          &:last-child {
-            border: none;
-          }
-          .switch {
-            position: relative;
-            width: 60px;
-            height: 34px;
-            margin: 20px;
-            flex-grow: 1;
-            input {
-              display: none;
-              &:checked + .slider {
-                background-color: deepskyblue;
-              }
-              &:focus + .slider {
-                box-shadow: 0 0 1px deepskyblue;
-              }
-              &:checked + .slider:before {
-                -webkit-transform: translateX(26px);
-                -ms-transform: translateX(26px);
-                transform: translateX(26px);
-              }
-            }
-            .slider {
-              position: absolute;
-              cursor: pointer;
-              top: 0;
-              left: 0;
-              right: 0;
-              bottom: 0;
-              background-color: #ccc;
-              -webkit-transition: 0.4s;
-              transition: 0.4s;
-              border-radius: 34px;
-              &:before {
-                position: absolute;
-                content: "";
-                height: 28px;
-                width: 28px;
-                left: 5px;
-                bottom: 3px;
-                background-color: white;
-                -webkit-transition: 0.4s;
-                transition: 0.4s;
-                border-radius: 50%;
-              }
-            }
-          }
-          .usage__text {
-            flex-grow: 100;
-            p {
-              color: rgba(0, 0, 0, 0.5);
-              font-size: 12px;
-            }
-          }
+      .rg-bar {
+        background-color:  lightgray;
+        width: 75%;
+        margin-top: 10px;
+        height: 8px;
+        border-radius: 2px;
+        .highlight {
+          width: 75%;
+          background: deepskyblue;
+          height: 100%;
         }
       }
-    }
-    .limits {
-      border: 1px solid deeppink;
-      width: 50%;
     }
   }
 }
