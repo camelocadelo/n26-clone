@@ -8,6 +8,7 @@
   display: flex;
   margin: 0px;
   padding: 0px;
+  overflow: hidden;
   &__form {
       height: 100%;
       width: 65%;
@@ -72,17 +73,17 @@
     background: url(../assets/img/sidebar-bg.jpg) no-repeat;
     background-size:100% 100%;
     display: inline-block;
-    width: 35%;
+    width: 60%;
     height: 100%;
     color: white;
     box-sizing: border-box;
     &__header {
-      height: 60px;
       top: 0;
+      right: 0;
       position: relative;
       width: 100%;
       text-align:right;
-      padding:40px;
+      padding:40px 0px;
       span {
         margin-right: 20px;
       }
@@ -93,6 +94,7 @@
         padding: 5px 25px;
         text-decoration: none;
         transition: 0.3s;
+        margin-right:30px;
         &:hover {
           background-color: deepskyblue;
           color: white;

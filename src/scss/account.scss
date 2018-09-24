@@ -158,7 +158,6 @@ router-link:visited {
       width: 90%;
       margin: 15px auto;
       padding: 15px;
-
       .btnSubmit {
         height: 30px;
         border: none;
@@ -204,8 +203,23 @@ router-link:visited {
           }
         }
       }
+      ul {
+        li {
+          list-style: none;
+          i {
+            margin-left:-15px; 
+            margin-right:15px; 
+          }
+        }
+        .checked {
+          color: deepskyblue;
+        }
+      }
       .short {
         color: #ff4136;
+      }
+      .weak {
+        color: orange;
       }
       .fair {
         color: deepskyblue;
@@ -230,6 +244,10 @@ router-link:visited {
         .bgShort {
           background-color: #ff4136;
           width: 15%;
+        }
+        .bgWeak {
+          background-color: orange;
+          width: 40%;
         }
         .bgFair {
           background-color: deepskyblue;
