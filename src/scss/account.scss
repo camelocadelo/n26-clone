@@ -1,14 +1,14 @@
 .account {
   background-color: #fbfbfb;
-
   &__info {
     font-family: "Open Sans", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     border-radius: 5px;
     width: 60%;
-    margin: 100px auto;
+    margin: 100px auto 10px;
     padding: 30px 18px;
+
     flex-grow: 3.5;
     &__first {
       display: flex;
@@ -73,7 +73,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     border-radius: 5px;
-    margin: 10px auto;
+    margin: 0px auto;
     padding: 27px 18px;
     width: 60%;
     .ticket {

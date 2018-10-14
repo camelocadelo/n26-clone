@@ -38,6 +38,11 @@
           </div>
         </div>
       </div>
+      <div class="bottom-shelf-title">
+        <h4 >Cards</h4>
+        <h4 >Card Limits</h4>
+      </div>
+
       <div class="bottom-shelf">
         <div class="usage">
           <ul class="box-shadow">
@@ -74,6 +79,26 @@
           </ul>
         </div>
         <div class="limits">
+           <ul class="box-shadow">
+            <li>
+              <div class="text">
+                <span>Daily Widthdrawal Limit</span> <span class="amount">€{{range1Value}}</span>
+                <p>Monthly fixed Limit: €20,000.00</p>
+              </div>
+              <div class="slidecontainer">
+                <input type="range" min="50" max="2500" step="50" v-model="range1Value" value="1000" class="slider">
+              </div>
+            </li>
+            <li>
+              <div class="text">
+                <span>Daily Payments Limit</span> <span class="amount">€1000</span>
+                <p>Monthly fixed Limit: €20,000.00</p>
+              </div>
+              <div class="slidecontainer">
+                <input type="range" min="50" max="5000" step="50" value="1000" class="slider">
+              </div>
+            </li>
+          </ul>
         </div>
       </div> 
     </div> 
@@ -82,133 +107,14 @@
 
 <script>
 export default {
-  name: "CardSettings"
+  name: "CardSettings",
+  data() {
+    return {
+      range1Value: 1000
+    };
+  }
 };
 </script>
 
 <style lang="scss" scoped>
-.card-settings {
-  font-family: "Open Sans", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #fbfbfb;
-  height: 100%;
-
-  .info {
-    display: flex;
-    .photo {
-      img {
-        width: 450px;
-        height: 280px;
-      }
-    }
-    .gear {
-      margin-left: 20px;
-      h4 {
-        margin: 0 0 15px 0;
-      }
-      &__item {
-        display: flex;
-        cursor: pointer;
-        margin: 20px 0;
-        &:hover span {
-          border-bottom: 3px solid deepskyblue;
-        }
-        &--title {
-          p {
-            margin-top: 5px;
-            font-size: 12px;
-            color: rgba(0, 0, 0, 0.5);
-          }
-        }
-        i {
-          font-size: 34px;
-          padding: 10px 20px;
-        }
-      }
-    }
-  }
-  .bottom-shelf {
-    display: flex;
-    margin-top: 50px;
-  }
-  .usage {
-    width: 50%;
-    ul {
-      background: white;
-      border-radius: 8px;
-      padding: 0px;
-      width: 90%;
-      li {
-        background-color: white;
-        display: flex;
-        height: 60px;
-        padding-left: 0px;
-        padding: 14.4px 18px;
-        box-sizing: content-box;
-        border-bottom: 1px solid lightgray;
-        list-style: none;
-        &:last-child {
-          border: none;
-        }
-        .switch {
-          position: relative;
-          width: 60px;
-          height: 34px;
-          margin: 20px;
-          flex-grow: 1;
-          input {
-            display: none;
-            &:checked + .slider {
-              background-color: deepskyblue;
-            }
-            &:focus + .slider {
-              box-shadow: 0 0 1px deepskyblue;
-            }
-            &:checked + .slider:before {
-              -webkit-transform: translateX(26px);
-              -ms-transform: translateX(26px);
-              transform: translateX(26px);
-            }
-          }
-          .slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #ccc;
-            -webkit-transition: 0.4s;
-            transition: 0.4s;
-            border-radius: 34px;
-            &:before {
-              position: absolute;
-              content: "";
-              height: 28px;
-              width: 28px;
-              left: 5px;
-              bottom: 3px;
-              background-color: white;
-              -webkit-transition: 0.4s;
-              transition: 0.4s;
-              border-radius: 50%;
-            }
-          }
-        }
-        .usage__text {
-          flex-grow: 100;
-          p {
-            color: rgba(0, 0, 0, 0.5);
-            font-size: 12px;
-          }
-        }
-      }
-    }
-  }
-  .limits {
-    border: 1px solid deeppink;
-    width: 50%;
-  }
-}
 </style>
