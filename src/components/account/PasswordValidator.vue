@@ -38,7 +38,7 @@
           <i class="fas fa-check"></i> Contain a capital letter
         </li>
       </ul>
-      <button v-bind:class="{disabled: !isValid, btnSubmit: true}" type="submit">Set new password</button>
+      <button v-bind:class="{disabled: !isValid, btnSubmit: true}" :disabled="isValid" >Set new password</button>
     </form>
   </div>
 </template>
