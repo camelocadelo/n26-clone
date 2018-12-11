@@ -1,5 +1,5 @@
 
-.navbar {
+.container {
   position: fixed;
   width: 100%;
   left: 0;
@@ -8,6 +8,16 @@
   z-index: 2;
   background-color: #fbfbfb;
   font-weight: lighter;
+  padding: 35px 0px;
+  display: flex;
+  justify-content: flex-start;
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  text-align: left;
+  box-sizing: border-box;
+
   a {
     font-weight: bold;
     color: #2c3e50;
@@ -15,34 +25,23 @@
       color: deepskyblue;
     }
   }
-
-}
-.container {
-  width: 100%;
-  display: flex;
-  padding: 35px 40px;
-  font-family: "Open Sans", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 16px;
-  text-align: left;
-  box-sizing: border-box;
+  
   &__logo {
+    flex: 2;
     order: 1;
-    flex-grow: 1;
     .n26_logo {
-      height: 32px;
-      width: 60px;
+      height: 25px;
+      width: 50px;
+    margin: 0 0px 0 30px;
+
       fill: currentcolor;
       position: relative;
     }
   }
   &__transactions {
+    flex: 6.5;
     order: 2;
-    top: 5px;
-    left: 42px;
     position: relative;
-    width: 63%;
     padding: 0px 18px;
 
     .fa-list {
@@ -54,9 +53,10 @@
   }
   &__account {
     order: 3;
-    flex-grow: 1;
+    flex: 2;
     text-align: right;
-    margin-right: 20px;
+    margin: 0 30px 0 0px;
+
     .fa-user {
       margin-right: 20px;
       font-size: 20px;
