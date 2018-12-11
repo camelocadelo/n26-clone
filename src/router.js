@@ -6,6 +6,7 @@ import CardSettings from "./components/account/CardSettings.vue";
 import AppSettings from "./components/account/AppSettings.vue";
 import SecuritySettings from "./components/account/SecuritySettings.vue";
 import Transactions from "./views/Transactions.vue";
+import Spaces from "./views/Spaces.vue";
 import Signup from "./views/Signup.vue";
 import auth from "@/lib/login/";
 
@@ -46,6 +47,12 @@ export default new Router({
       path: "/transactions",
       name: "transactions",
       component: Transactions,
+      beforeEnter: auth.requireAuth
+    },
+    {
+      path: "/spaces",
+      name: "Spaces",
+      component: Spaces,
       beforeEnter: auth.requireAuth
     },
     {

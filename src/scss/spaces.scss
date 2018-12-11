@@ -1,0 +1,23 @@
+.spaces {
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;  
+  border-radius: 5px;
+  display: block;
+  background-color: #fbfbfb;
+  box-sizing: border-box;
+
+  &__details {
+    text-align: left;
+    width: 60%;
+    margin: 100px auto;
+    padding: 30px 18px 0 18px;
+
+    &__label {
+      color: grey;
+      font-weight: lighter;
+      position: relative;
+      top: -20px;
+    }
+  }
+}
