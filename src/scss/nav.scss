@@ -25,7 +25,17 @@
       color: deepskyblue;
     }
   }
-  
+  &__spaces { 
+    order: 3;
+    flex: 5;
+    .fa-th-large{
+      position: relative;
+      margin-right: 15px;
+      font-size: 20px;
+      top: 2px;
+
+    }
+  }
   &__logo {
     flex: 2;
     order: 1;
@@ -38,7 +48,7 @@
     }
   }
   &__transactions {
-    flex: 6.5;
+    flex: 1;
     order: 2;
     position: relative;
     padding: 0px 18px;
