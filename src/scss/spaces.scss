@@ -7,11 +7,12 @@
   background-color: #fbfbfb;
   box-sizing: border-box;
 
-  &__details {
+  &__main-details {
     text-align: left;
     width: 60%;
-    margin: 100px auto;
+    margin: 100px auto 20px;
     padding: 30px 18px 0 18px;
+
 
     &__label {
       color: grey;
@@ -20,4 +21,34 @@
       top: -20px;
     }
   }
+  ul {
+      padding: 30px 18px 0 18px;
+      width: 60%;
+      margin: 10px auto;
+      display: flex;
+      flex-wrap: wrap;
+    li {
+      list-style: none;
+      padding: 0 10px;
+    }
+  }
+      &__details {
+        order: 2;
+        text-align: center;
+        &__name {
+          display: block;
+        }
+        &__balance {
+          color: grey;
+
+        }
+      }
+      &__square {
+        order: 1;
+        img {
+        width: 200px;
+        border-radius: 8px;
+
+        }
+      }
 }

@@ -1,8 +1,26 @@
 <template>
-  <div class="spaces__details">
-    <h1>Spaces</h1>
-    <h5 class="spaces__details__label">Total balance €2029.34</h5>
-</div>
+  <ul>
+    <li>
+      <div class="spaces__square">
+          <img src="@/assets/img/main_account.jpg">
+        </div>
+        <div class="spaces__details">
+          <span class="spaces__details__name" >Main Account</span>
+          <span class="spaces__details__balance">€229.34</span>
+        </div>
+        
+    </li>
+    <li>
+        <div class="spaces__square">
+          <img src="https://cdn.number26.de/spaces/default-images/education_books.jpg?version=1">
+        </div>
+        <div class="spaces__details">
+          <span class="spaces__details__name" >Vacation</span>
+          <span class="spaces__details__balance">€24</span>
+        </div>
+        
+    </li>
+  </ul>
 </template>
 
 <script>
