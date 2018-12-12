@@ -17,8 +17,14 @@
         <div class="spaces__details">
           <span class="spaces__details__name" >Vacation</span>
           <span class="spaces__details__balance">€24</span>
-        </div>
-        
+        </div>  
+    </li>
+    <li>
+        <button class="spaces__create-new">
+          <i class="far fa-plus-square"></i>
+          <span>Create a new space</span>
+        </button>
+          
     </li>
   </ul>
 </template>
