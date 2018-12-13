@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div  @dragover.prevent id="app">
       <navbar v-if="isAuthenticated"></navbar>
     <router-view/>
   </div>
