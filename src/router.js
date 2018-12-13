@@ -7,6 +7,7 @@ import AppSettings from "./components/account/AppSettings.vue";
 import SecuritySettings from "./components/account/SecuritySettings.vue";
 import Transactions from "./views/Transactions.vue";
 import Spaces from "./views/Spaces.vue";
+import Transfer from "./views/Transfer.vue";
 import Signup from "./views/Signup.vue";
 import auth from "@/lib/login/";
 
@@ -18,6 +19,12 @@ export default new Router({
       path: "/",
       name: "login",
       component: Login
+    },
+    {
+      path: "/transfer",
+      name: "transfer",
+      component: Transfer,
+      beforeEnter: auth.requireAuth
     },
     {
       path: "/account",

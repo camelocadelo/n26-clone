@@ -1,0 +1,23 @@
+.transfer {
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;  
+  border-radius: 5px;
+  display: block;
+  background-color: #fbfbfb;
+  box-sizing: border-box;
+
+  &__main-details {
+    text-align: left;
+    width: 60%;
+    margin: 100px auto 20px;
+    padding: 30px 18px 0 18px;
+    a {
+      text-decoration: none ;
+      color: rgba(0, 0, 0, 0.8);
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
