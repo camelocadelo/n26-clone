@@ -48,6 +48,8 @@ export default {
     drop() {
       event.preventDefault();
       this.dragged = false;
+      this.$router.push({ name: 'transfer', query: { spaceName: 'Vacation' }  });
+
     }
   }
 };
