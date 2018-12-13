@@ -27,7 +27,7 @@
   }
   &__spaces { 
     order: 3;
-    flex: 5;
+    flex: 4;
     .fa-th-large{
       position: relative;
       margin-right: 15px;
@@ -48,11 +48,10 @@
     }
   }
   &__transactions {
-    flex: 1;
+    flex: 2;
     order: 2;
     position: relative;
-    padding: 0px 18px;
-
+    padding: 0 0 0 18px;
     .fa-list {
       margin-right: 15px;
       font-size: 20px;
