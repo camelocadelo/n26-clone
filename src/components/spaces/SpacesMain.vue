@@ -1,10 +1,9 @@
 <template>
   <ul>
     <li>
-      
-      <div class="spaces__square"  draggable="true" @dragstart="drag($event)">
-        <div class="spaces__square__overlay">
-        </div>
+      <div class="spaces__square" :class="{appear : dragged}" draggable="true" @dragstart="drag($event)">
+        <div class="spaces__square__overlay"></div>
+        <div ref="movable" class="spaces__square__movable"></div>
         <img src="@/assets/img/main_account.jpg">
       </div>
       <div class="spaces__details">
@@ -13,9 +12,9 @@
       </div>
     </li>
     <li @drop="drop($event)" @dragover.prevent>
-      <div class="spaces__square" >
-        <div class="spaces__square__overlay">
-        </div>
+      <div class="spaces__square">
+        <div class="spaces__square__overlay"></div>
+        <div v-if="dragged" id="movable" class="spaces__square__movable"></div>
         <img src="https://cdn.number26.de/spaces/default-images/education_books.jpg?version=1">
       </div>
       <div class="spaces__details">
@@ -23,6 +22,7 @@
         <span class="spaces__details__balance">€24</span>
       </div>
     </li>
+
     <li>
       <button class="spaces__create-new">
         <i class="far fa-plus-square"></i>
@@ -35,15 +35,19 @@
 <script>
 export default {
   name: "SpacesMain",
+  data() {
+    return {
+      dragged: false
+    };
+  },
   methods: {
     drag() {
-      // eslint-disable-next-line
-      console.log("dragin");
+      this.dragged = true;
+      event.dataTransfer.setDragImage(this.$refs.movable, 50, 50);
     },
     drop() {
-      // eslint-disable-next-line
-
-      console.log("dropping");
+      event.preventDefault();
+      this.dragged = false;
     }
   }
 };
