@@ -6,7 +6,7 @@
   -moz-osx-font-smoothing: grayscale;  
   border-radius: 5px;
   display: block;
-  background-color: #fbfbfb;
+  background-color: $bg-color-light;
   box-sizing: border-box;
 
   &__main-details {
@@ -99,7 +99,7 @@
       all: unset;
       width: 200px;
       height: 200px;
-      background-color: white;
+      background-color: $bg-color-element;
       border-radius: 8px;
       display: flex;
       text-align: center;

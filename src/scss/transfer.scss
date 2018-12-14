@@ -6,7 +6,7 @@
   -moz-osx-font-smoothing: grayscale;  
   border-radius: 5px;
   display: block;
-  background-color: #fbfbfb;
+  background-color: $bg-color-light;
   box-sizing: border-box;
 
   &__info {
@@ -27,7 +27,7 @@
     border-radius: 8px;
     margin: 20px;
     padding: 20px 30px; 
-    background: white;
+    background: $bg-color-element;
     &__spaces {
       display: flex;
       &__account{
@@ -70,7 +70,7 @@
       button {
         all: unset;
         background: $brandcolor;
-        color: white;
+        color: $bg-color-element;
         padding: 15px 20px;
         border-radius: 8px;
         margin-top: 20px; 

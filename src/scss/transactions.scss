@@ -6,7 +6,7 @@
   -moz-osx-font-smoothing: grayscale;  
   border-radius: 5px;
   display: block;
-  background-color: #fbfbfb;
+  background-color: $bg-color-light;
   box-sizing: border-box;
   &__details {
     text-align: left;
@@ -46,7 +46,7 @@
         list-style: none;
         width: 100%;
         display: block;
-        border-left: 5px solid white;
+        border-left: 5px solid $bg-color-element;
         border-bottom: 1px solid rgba(0, 0, 0, 0.075);
         box-sizing: border-box;
         cursor: pointer;
@@ -58,7 +58,7 @@
   }
   &__each {
     
-    background-color: white;
+    background-color: $bg-color-element;
     display: flex;
     height: 60px;
     padding: 14.4px 18px;

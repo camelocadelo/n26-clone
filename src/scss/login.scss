@@ -3,15 +3,14 @@
 
 .login {
   max-width: 768px;
-  color: black;
   font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: $font-color;
   h1 {
     font-size: 26px;
-    color: #fbfbfb;
+    color: $font-color ;
   }
   form {
     width: 350px;
@@ -42,7 +41,7 @@
     }
     a {
       text-decoration: none;
-      color: white;
+      color: $font-color;
       transition: 250ms;
       margin-bottom: 20px;
       display: inline-block;
@@ -80,7 +79,7 @@
     }
     .btn_login{
       background-color: $brandcolor;
-      color: white;
+      color: $font-color;;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -95,16 +94,16 @@
       }
     }
     .loading {
-      opacity : 0.4;
+      opacity : 0.6;
     }
     .btn_login:hover{
       color: $brandcolor;
     }
     .btn_login::after {
-      background-color: white;      
+      background-color: $font-color;      
     }
     .btn_signup{
-      background-color: white;
+      background-color: $font-color;
       color: $brandcolor;
       border-radius: 5px;
       margin: 10px 0;
@@ -139,7 +138,7 @@
       transform: translateY(0);
     }
     .btn_signup:hover{
-      color: white;
+      color: $font-color;
     }
     .btn_signup::after {
       background-color: $brandcolor;
@@ -148,25 +147,11 @@
 }
 
 .n26_logo {
-  margin-bottom: 1em;
-  margin-top: 120px;
   display: block;
+  margin: 0 auto 1em;
   max-height: 40px;
   max-width: 80px;
-  fill: currentcolor;
-  color: inherit;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1em;
-  margin-top: 0;
-  display: block;
-  max-height: 40px;
-  max-width: 80px;
-  fill: currentcolor;
-  color: inherit;
-  color: #fbfbfb;
-  margin-left: auto;
-  margin-right: auto;
+  fill: $font-color;
 }
 
 .error {

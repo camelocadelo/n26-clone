@@ -15,6 +15,7 @@ body {
 #app {
   font-family: "Open Sans", sans-serif;
   background-color: $bg-color-light;
+  color: $font-color;
   height: 100%;
 }
 h1 {
@@ -69,7 +70,7 @@ router-link:visited {
   font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fbfbfb;
+  background-color: $bg-color-light;
   height: 100%;
 
   .info {
@@ -120,12 +121,12 @@ router-link:visited {
   .usage {
     width: 50%;
     ul {
-      background: white;
+      background: $bg-color-element;
       border-radius: 8px;
       padding: 0px;
       width: 90%;
       li {
-        background-color: white;
+        background-color: $bg-color-element;
         display: flex;
         height: 60px;
         padding: 14.4px 18px;
@@ -173,7 +174,7 @@ router-link:visited {
               width: 28px;
               left: 5px;
               bottom: 3px;
-              background-color: white;
+              background-color: $bg-color-element;
               -webkit-transition: 0.4s;
               transition: 0.4s;
               border-radius: 50%;
