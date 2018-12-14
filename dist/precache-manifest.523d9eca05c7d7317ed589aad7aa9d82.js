@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "b37510baba2994f6b1df9fcdd010ba69",
-    "url": "img/card.b37510ba.jpg"
+    "revision": "aecd3b2e2d89ab5857cdff8225c92db5",
+    "url": "img/de.aecd3b2e.svg"
   },
   {
     "revision": "735ab4f94fbcd57074377afca324c813",
     "url": "robots.txt"
   },
   {
-    "revision": "aecd3b2e2d89ab5857cdff8225c92db5",
-    "url": "img/de.aecd3b2e.svg"
+    "revision": "7a616c7345096e1e0800ce447ef3f6ed",
+    "url": "img/en.7a616c73.svg"
   },
   {
     "revision": "79c741c4a70696f80326",
@@ -28,6 +28,10 @@ self.__precacheManifest = [
     "url": "img/main_account.1660bbde.jpg"
   },
   {
+    "revision": "b37510baba2994f6b1df9fcdd010ba69",
+    "url": "img/card.b37510ba.jpg"
+  },
+  {
     "revision": "16c3cb16c406f876fd1b4cf57baa36ec",
     "url": "favicon.png"
   },
@@ -36,8 +40,8 @@ self.__precacheManifest = [
     "url": "img/sidebar-bg.b7a502d7.jpg"
   },
   {
-    "revision": "7a616c7345096e1e0800ce447ef3f6ed",
-    "url": "img/en.7a616c73.svg"
+    "revision": "7433a7d31cfc5d60bf21f44a45bc2ef1",
+    "url": "img/spinner.7433a7d3.gif"
   },
   {
     "revision": "20f91d5825e546413bd8300758ee4f6b",
@@ -48,15 +52,15 @@ self.__precacheManifest = [
     "url": "img/it.711a1f6f.svg"
   },
   {
-    "revision": "f88f2e18e681ebfc2ba1e814fb7b14af",
+    "revision": "d96b181673d4d33ccc7b60d6ad3f6210",
     "url": "index.html"
   },
   {
-    "revision": "6c89c7cbdfb399d0f10b",
-    "url": "app.8c151f9c.css"
+    "revision": "875c561263f70142f511",
+    "url": "app.a69f6923.css"
   },
   {
-    "revision": "6c89c7cbdfb399d0f10b",
-    "url": "app.6c89c7cb.js"
+    "revision": "875c561263f70142f511",
+    "url": "app.875c5612.js"
   }
 ];
