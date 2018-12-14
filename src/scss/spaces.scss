@@ -1,3 +1,5 @@
+@import "variables";
+
 .spaces {
   font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -107,11 +109,11 @@
       cursor: pointer;
       font-size: 14px;
       line-height: 22px;
-      color: deepskyblue;
+      color: $brandcolor;
       border: 2px solid transparent; 
       transition: all 0.3s;
       &:hover {
-        border: 2px solid deepskyblue;
+        border: 2px solid $brandcolor;
       }
       i {
         font-size: 30px;

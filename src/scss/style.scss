@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
-$brandcolor: deepskyblue;
-$bg-color-light:#fbfbfb;
+@import "variables";
+
 
 html {
   width: 100%;
@@ -90,7 +90,7 @@ router-link:visited {
         cursor: pointer;
         margin: 20px 0;
         &:hover span {
-          border-bottom: 3px solid deepskyblue;
+          border-bottom: 3px solid $brandcolor;
         }
         &--title {
           p {
@@ -144,10 +144,10 @@ router-link:visited {
           input {
             display: none;
             &:checked + .slider {
-              background-color: deepskyblue;
+              background-color: $brandcolor;
             }
             &:focus + .slider {
-              box-shadow: 0 0 1px deepskyblue;
+              box-shadow: 0 0 1px $brandcolor;
             }
             &:checked + .slider:before {
               -webkit-transform: translateX(26px);
@@ -235,7 +235,7 @@ router-link:visited {
       width: 15px;
       height: 15px;
       border-radius: 50%;
-      background: deepskyblue;
+      background: $brandcolor;
       cursor: pointer;
     }
 
@@ -250,7 +250,7 @@ router-link:visited {
 }
 
 .right-border {
-  border-left: 4px solid deepskyblue;
+  border-left: 4px solid $brandcolor;
   transition: all 0.2s;
   padding-left: 15px !important;
 }

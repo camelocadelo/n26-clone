@@ -1,3 +1,5 @@
+@import "variables";
+
 .signup {
   height: 100%;
   width: 100%;
@@ -12,7 +14,7 @@
   &__form {
       height: 100%;
       width: 65%;
-      background-color: deepskyblue;
+      background-color: brandcolor;
       box-sizing: border-box;
       color: white;
       font-size: 0.9em;
@@ -46,7 +48,7 @@
       }
       button {
           margin-top: 50px;
-          color: deepskyblue;
+          color: $brandcolor;
           border: 3px solid #009fff;
           font-weight: bold;
           height: 50px;
@@ -88,15 +90,15 @@
         margin-right: 20px;
       }
       .login-btn{
-        border: 2px solid deepskyblue;
+        border: 2px solid $brandcolor;
         border-radius: 3px;
-        color: deepskyblue;
+        color: $brandcolor;
         padding: 5px 25px;
         text-decoration: none;
         transition: 0.3s;
         margin-right:30px;
         &:hover {
-          background-color: deepskyblue;
+          background-color: $brandcolor;
           color: white;
         }
       }

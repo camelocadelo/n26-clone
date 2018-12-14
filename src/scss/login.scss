@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import "variables";
 
 .login {
   max-width: 768px;
@@ -47,7 +48,7 @@
       display: inline-block;
     }
     a:hover {
-      color: deepskyblue;
+      color: $brandcolor;
     }
     button {
       border-radius: 5px;
@@ -78,7 +79,7 @@
       transform: translateY(0);
     }
     .btn_login{
-      background-color: deepskyblue;
+      background-color: $brandcolor;
       color: white;
       display: flex;
       justify-content: center;
@@ -97,14 +98,14 @@
       opacity : 0.4;
     }
     .btn_login:hover{
-      color: deepskyblue;
+      color: $brandcolor;
     }
     .btn_login::after {
       background-color: white;      
     }
     .btn_signup{
       background-color: white;
-      color: deepskyblue;
+      color: $brandcolor;
       border-radius: 5px;
       margin: 10px 0;
       font-size: 16px;
@@ -141,7 +142,7 @@
       color: white;
     }
     .btn_signup::after {
-      background-color: deepskyblue;
+      background-color: $brandcolor;
     }
   }
 }
