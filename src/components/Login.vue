@@ -15,8 +15,11 @@
       <input v-bind:class="{ redBorder: error }" v-model="email"  type="text" placeholder="Email" class="email">
       <input v-bind:class="{ redBorderBtm: error }" v-model="password" type="password" placeholder="Password" class="password">
       <a href='#'>Forgot your password ?</a>
-      <button class="btn_login">Login</button>
-      <router-link class="btn_signup" to="/signup"> Create an account</router-link>
+      <button class="btn_login" :class="{loading: isLoading}">
+        <span class="spinner" v-if="isLoading"><img src="@/assets/img/spinner.gif" alt=""></span>
+        <span>Login</span>
+      </button>
+      <router-link class="btn_signup" :class="{loading: isLoading}" to="/signup"> Create an account</router-link>
     </form>
   </div>
 </template>
@@ -32,7 +35,7 @@ export default {
       email: "",
       password: "",
       error: false,
-      spinner: false,
+      isLoading: false,
       redBorder: false,
       redirected: this.$route.query.redirect
     };
@@ -44,17 +47,20 @@ export default {
   },
   methods: {
     login() {
-      this.spinner = true;
-      if (this.email === "demo" && this.password === "demo") {
-        this.setAuthentication(true);
-        auth.isLoggedIn(true);
-        this.$router.replace(this.$route.query.redirect || "/transactions");
-      } else {
-        this.error = true;
-        this.redBorder = true;
-        this.spinner = false;
-        this.redirected = false;
-      }
+      this.isLoading = true;
+      setTimeout(() => {
+        if (this.email === "demo" && this.password === "demo") {
+          this.setAuthentication(true);
+          auth.isLoggedIn(true);
+          this.$router.replace(this.$route.query.redirect || "/transactions");
+          this.isLoading = false;
+        } else {
+          this.error = true;
+          this.redBorder = true;
+          this.isLoading = false;
+          this.redirected = false;
+        }
+      }, 2000);
     },
     ...mapActions({
       setAuthentication: "setAuthentication"
