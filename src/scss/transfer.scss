@@ -7,7 +7,7 @@
   background-color: #fbfbfb;
   box-sizing: border-box;
 
-  &__main-details {
+  &__info {
     text-align: left;
     width: 60%;
     margin: 100px auto 20px;
@@ -17,6 +17,38 @@
       color: rgba(0, 0, 0, 0.8);
       &:hover {
         text-decoration: underline;
+      }
+    }
+  }
+  &__main {
+    border-radius: 8px;
+    height: 200px;
+    margin: 20px;
+    background: white;
+    &__spaces {
+      display: flex;
+      &__account{
+        flex: 1;
+        display: flex;
+        margin: 20px;
+        box-shadow: 0 1px 0 rgb(245, 245, 245);
+        padding-bottom: 15px;
+
+        &__info {
+          font-size: 14px;
+          display: flex;
+          flex-wrap: wrap;
+          margin-left: 25px;;
+          .balance {
+            opacity: 0.4;
+            width: 100%;
+          }
+        }
+        img {
+          width: 50px;
+          height: 50px;
+          border-radius: 8px;
+        }
       }
     }
   }

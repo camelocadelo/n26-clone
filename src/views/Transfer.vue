@@ -1,15 +1,18 @@
 
 <template>
   <div class="transfer">
-    <TrasnferInfo></TrasnferInfo>
+    <TransferInfo></TransferInfo>
+    <TransferMain></TransferMain>
   </div>
 </template>
 <script>
-import TrasnferInfo from "../components/transfer/TransferInfo.vue";
+import TransferInfo from "../components/transfer/TransferInfo.vue";
+import TransferMain from "../components/transfer/TransferMain.vue";
 export default {
   name: "Transfer",
   components: {
-    TrasnferInfo
+    TransferInfo,
+    TransferMain
   }
 };
 </script>

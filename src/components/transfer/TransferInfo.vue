@@ -1,5 +1,5 @@
 <template>
-  <div class="transfer__main-details">
+  <div class="transfer__info">
     <h1>Trasnfer</h1>
     <router-link to="/spaces">
       <i class="fas fa-angle-left"></i>
