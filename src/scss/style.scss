@@ -248,3 +248,9 @@ router-link:visited {
     }
   }
 }
+
+.right-border {
+  border-left: 4px solid deepskyblue;
+  transition: all 0.2s;
+  padding-left: 15px !important;
+}
