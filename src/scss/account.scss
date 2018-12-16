@@ -16,6 +16,22 @@
       h4 {
         width: 100%;
       }
+      .logout {
+        color: tomato;
+        text-align: right;
+        span{
+          border: 1px solid ;
+          cursor: pointer;
+          padding: 8px;
+          border-radius: 8px;
+          transition: .2s;
+          &:hover {
+            color: $bg-color-light;
+            background: tomato;
+          }
+        }
+
+      }
     }
     &__second {
       display: flex;

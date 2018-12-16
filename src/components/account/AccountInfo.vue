@@ -4,8 +4,10 @@
       <h1>My Account</h1>
     </div>
     <div class="account__info__first">
-      <h4>Membership</h4>      
+      <h4>Membership</h4>  
+      <h4 class="logout"><span @click="logout">log-out</span></h4>
     </div>
+
     <div class="account__info__second">              
       <div class="account__info__membership">
         <h2>Frank Bale</h2>
@@ -34,7 +36,20 @@
 </template>
 
 <script>
+import auth from "@/lib/login/";
+import { mapActions } from "vuex";
 export default {
-  name: "AccountInfo"
+  name: "AccountInfo",
+  methods: {
+    logout() {
+          auth.logout();
+          this.setAuthentication(false);          
+          this.$router.replace(this.$route.query.redirect || "/");
+
+    },
+    ...mapActions({
+      setAuthentication: "setAuthentication"
+    })
+  }
 };
 </script>
