@@ -1,31 +1,25 @@
 <template>
-  <div class="home">
-    <Login></Login>
+  <div class="login">
+    <login-form></login-form>
+    <login-footer></login-footer>
   </div>
 </template>
 
 <script>
-import Login from "@/components/Login.vue";
+import LoginForm from "@/components/login/LoginForm.vue";
+import LoginFooter from "@/components/login/LoginFooter.vue";
 
 export default {
   name: "login",
   components: {
-    Login
+    LoginForm,
+    LoginFooter
   }
 };
 </script>
 
 <style lang="scss" scoped>
-.home {
-  background: url("../assets/img/everest.jpg") fixed no-repeat;
-  background-size: 100% 100%;
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
+</style>
+<style src="@/scss/login.scss" lang="scss">
 </style>

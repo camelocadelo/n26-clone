@@ -1,147 +1,158 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @import "variables";
-
 .login {
-  max-width: 768px;
-  font-family: "Open Sans", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: $font-color;
-  h1 {
-    font-size: 26px;
-    color: $font-color ;
-  }
-  form {
-    width: 350px;
-    margin: 0 auto;
-    input,
-    button {
-      width: 100%;
-      height: 43px;
-      border: none;
-      font-family: "Open Sans", sans-serif;
-      font-size: 90%;
+  background: url("../assets/img/rever.jpg") fixed no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__form {
+    max-width: 768px;
+    font-family: "Open Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: $font-color;
+    h1 {
+      font-size: 26px;
+      color: $font-color ;
     }
-    :focus {
-      outline: none;
-    }
-    .email {
-      border-top-right-radius: 5px;
-      border-top-left-radius: 5px;
-      border: 1px solid rgb(246, 246, 246);
-      padding-left: 10px;
-    }
-    .password {
-      border: 1px solid rgb(246, 246, 246);
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-      margin-bottom: 30px;
-      padding-left: 10px;
-    }
-    a {
-      text-decoration: none;
-      color: $font-color;
-      transition: 250ms;
-      margin-bottom: 20px;
-      display: inline-block;
-    }
-    a:hover {
-      color: $brandcolor;
-    }
-    button {
-      border-radius: 5px;
-      margin: 10px 0;
-      font-size: 16px;
-      line-height: 1.2;
-      font-weight: bold;
-      cursor: pointer;
-      position: relative;
-      z-index: 1;
-      overflow: hidden;
-      transition: 0.2s ease-in-out;
-    }
-    button::after {
-      content: "";
-      position: absolute;
-      transition: 0.2s ease-in-out;
-      z-index: -1;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      -webkit-transform: translateY(100%);
-      transform: translateY(100%);
-    }
-    button:hover::after {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-    }
-    .btn_login{
-      background-color: $brandcolor;
-      color: $font-color;;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      .spinner {
-        img{
-          width: 30px;
-          height: 30px;
-          position: relative;
-          top: 0px;
-          left: -10px;
+    form {
+      width: 350px;
+      margin: 0 auto;
+      input,
+      button {
+        width: 100%;
+        height: 43px;
+        border: none;
+        font-family: "Open Sans", sans-serif;
+        font-size: 90%;
+      }
+      :focus {
+        outline: none;
+      }
+      .email {
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        border: 1px solid rgb(246, 246, 246);
+        padding-left: 10px;
+      }
+      .password {
+        border: 1px solid rgb(246, 246, 246);
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        margin-bottom: 30px;
+        padding-left: 10px;
+      }
+      a {
+        text-decoration: none;
+        color: $font-color;
+        transition: 250ms;
+        margin-bottom: 20px;
+        display: inline-block;
+      }
+      a:hover {
+        color: $brandcolor;
+      }
+      button {
+        border-radius: 5px;
+        margin: 10px 0;
+        font-size: 16px;
+        line-height: 1.2;
+        font-weight: bold;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        transition: 0.2s ease-in-out;
+      }
+      button::after {
+        content: "";
+        position: absolute;
+        transition: 0.2s ease-in-out;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+      }
+      button:hover::after {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+      }
+      .btn_login{
+        background-color: $brandcolor;
+        color: $font-color;;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .spinner {
+          img{
+            width: 30px;
+            height: 30px;
+            position: relative;
+            top: 0px;
+            left: -10px;
+          }
         }
       }
-    }
-    .loading {
-      opacity : 0.6;
-    }
-    .btn_login:hover{
-      color: $brandcolor;
-    }
-    .btn_login::after {
-      background-color: $font-color;      
-    }
-    .btn_signup{
-      background-color: $font-color;
-      color: $brandcolor;
-      border-radius: 5px;
-      margin: 10px 0;
-      font-size: 16px;
-      line-height: 1.2;
-      font-weight: bold;
-      cursor: pointer;
-      position: relative;
-      z-index: 1;
-      overflow: hidden;
-      transition: 0.2s ease-in-out;
-      border: none;
-      font-family: "Open Sans", sans-serif;
-      font-size: 90%;
-      padding: 12px;
-      width: 93%;
-    }
-    .btn_signup::after {
-      content: "";
-      position: absolute;
-      transition: 0.2s ease-in-out;
-      z-index: -1;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      -webkit-transform: translateY(100%);
-      transform: translateY(100%);
-    }
-    .btn_signup:hover::after {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-    }
-    .btn_signup:hover{
-      color: $font-color;
-    }
-    .btn_signup::after {
-      background-color: $brandcolor;
+      .loading {
+        opacity : 0.6;
+      }
+      .btn_login:hover{
+        color: $brandcolor;
+      }
+      .btn_login::after {
+        background-color: $font-color;      
+      }
+      .btn_signup{
+        background-color: $font-color;
+        color: $brandcolor;
+        border-radius: 5px;
+        margin: 10px 0;
+        font-size: 16px;
+        line-height: 1.2;
+        font-weight: bold;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        transition: 0.2s ease-in-out;
+        border: none;
+        font-family: "Open Sans", sans-serif;
+        font-size: 90%;
+        padding: 12px;
+        width: 93%;
+      }
+      .btn_signup::after {
+        content: "";
+        position: absolute;
+        transition: 0.2s ease-in-out;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+      }
+      .btn_signup:hover::after {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+      }
+      .btn_signup:hover{
+        color: $font-color;
+      }
+      .btn_signup::after {
+        background-color: $brandcolor;
+      }
     }
   }
 }
@@ -175,4 +186,30 @@
 .redBorderBtm {
   border: 1px solid rgb(215, 55, 55) !important;
   border-top:none !important;
+}
+footer {
+  position: fixed;
+  background: white;
+  color: #000;
+  border: 1px solid white;
+  width: 100%;
+  bottom: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+  font: .9em sans-serif;
+  ul {
+    all: unset;
+    margin-right: 50px;
+    li {
+      display: inline-block;
+      margin: 2px 10px;
+      cursor: pointer;
+      a {
+        &:visited {
+          color: #000
+        }
+      }
+    }
+  }
 }
