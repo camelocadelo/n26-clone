@@ -5,7 +5,7 @@
     </div>
     <div class="account__info__first">
       <h4>Membership</h4>
-      <h4 class="logout">
+      <h4 role="logout" class="logout">
         <span @click="logout"><i class="fas fa-sign-out-alt"></i></span>
       </h4>
     </div>

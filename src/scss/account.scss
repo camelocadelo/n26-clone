@@ -19,10 +19,13 @@
       .logout {
         color: tomato;
         text-align: right;
+        font-size: 25px;
+        position: relative;
+        top: -25px;
         span{
           border: 1px solid ;
           cursor: pointer;
-          padding: 8px;
+          padding: 10px;
           border-radius: 8px;
           transition: .2s;
           &:hover {
@@ -142,19 +145,6 @@
       }
     }
   }
-}
-
-router-link {
-  text-decoration: none;
-  color: $font-color;
-}
-router-link:active {
-  text-decoration: none;
-  color: $font-color;
-}
-router-link:visited {
-  text-decoration: none;
-  color: $font-color;
 }
 
 .security-settings {
@@ -282,21 +272,41 @@ router-link:visited {
 }
 
 .app-settings {
-  font-family: "Open Sans", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   height: 100%;
   background-color: $bg-color-light;
-  border: 1px solid transparent;
-  .content {
-    display: flex;
+  width: 60%;
+  padding: 20px 18px;
+  margin: 100px auto;
+  position: relative;
+  bottom: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  height: initial;
+  @media only screen and (max-width: 1062px) {
+    width: 80%;
   }
-  .language {
-    width: 40%;
+  @media only screen and (max-width: 900px) {
+    width: 90%;
+  }
+  &__info {
+  width: 100%;
+  margin-bottom: 30px;
+    .intro {
+      a {
+        text-decoration: none;
+        color: $font-color;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  &__language {
+    flex: 1;
     ul {
       list-style: none;
       background-color: $bg-color-element;
-      margin: 0px;
+      margin: 10px;
       padding: 0px;
       border-radius: 8px;
       li {
@@ -304,6 +314,7 @@ router-link:visited {
         border-bottom: 1px solid lightgrey;
         cursor: pointer;
         transition: 0.3s;
+        display: flex;
         &:last-child {
           border: none;
         }
@@ -315,17 +326,22 @@ router-link:visited {
           margin-right: 20px;
           top: 5px;
           position: relative;
+          flex: 1;
         }
         i {
+          align-self: flex-end;
           color: $brandcolor;
           font-size: 1.3em;
           position: relative;
           transition: 0.3s;
           opacity: 0;
+          flex: 1; 
+          text-align: right;
         }
         .name {
-          width: 80%;
-          display: inline-block;
+          flex: 5;          
+
+
         }
         .current {
           opacity: 1;
@@ -333,23 +349,22 @@ router-link:visited {
       }
     }
   }
-  .usage {
-    margin-left: 30px;
-    width: 40%;
+  &__usage {
+    flex: 1;
     ul {
       list-style: none;
       background-color: $bg-color-element;
-      margin: 0px;
+      margin: 10px;
       padding: 0px;
+      
       li {
         background-color: $bg-color-element;
         display: flex;
-        height: 50px;
         padding-left: 0px;
         padding: 10px 18px;
-        box-sizing: content-box;
         border-bottom: 1px solid lightgray;
         list-style: none;
+        
         &:last-child {
           border: none;
         }

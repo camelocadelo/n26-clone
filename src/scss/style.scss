@@ -255,3 +255,16 @@ router-link:visited {
   transition: all 0.2s;
   padding-left: 15px !important;
 }
+
+router-link {
+  text-decoration: none;
+  color: $font-color;
+}
+router-link:active {
+  text-decoration: none;
+  color: $font-color;
+}
+router-link:visited {
+  text-decoration: none;
+  color: $font-color;
+}
