@@ -9,8 +9,7 @@
       y="0px"
       viewBox="0 0 375.2 197"
       style="enable-background:new 0 0 375.2 197"
-      xml:space="preserve"
-    >
+      xml:space="preserve">
       <title>N26 logo</title>
       <polygon
         points="16.1,61.5 87.7,167.2 100.9,167.2 100.9,29.4 84.9,29.4 84.9,134.2 15.6,32 13.8,29.4 6.4,29.4 6.2,29.3 6.2,29.4 0.2,29.4 0.2,167.2 16.1,167.2     "
@@ -49,7 +48,8 @@
         placeholder="Password"
         class="password"
       >
-      <a href="#">Forgot your password ?</a>
+      <router-link to="/Forgot-password">Forgot your password ?</router-link>
+
       <button class="btn_login" :class="{loading: isLoading}">
         <span class="spinner" v-if="isLoading">
           <img src="@/assets/img/spinner.gif" alt>
